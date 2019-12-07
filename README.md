@@ -6,17 +6,16 @@ The project is the second one of the three projects required for graduating [Uda
 
 ## Project details
 ### Environment 
-The environment under consideration is on of the many [Unity ML-Agents Toolkit's](https://github.com/Unity-Technologies/ml-agents) game environments. These environments enable games and simulations to serve as environments for training intelligent agents. In the environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. The goal of each agent is to keep the ball in play.
-
-The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.<br/> <br/> <br/> ![Tennis Collaboration](gifs/tennis.gif)
+The environment under consideration is on of the many [Unity ML-Agents Toolkit's](https://github.com/Unity-Technologies/ml-agents) game environments. These environments enable games and simulations to serve as environments for training intelligent agents. In the environment, two agents control rackets to bounce a ball over a net. The goal of each agent is to keep the ball in play.<br/> <br/> <br/> ![Tennis Collaboration](gifs/tennis.gif)
 
 #### State Space
-The Vector Observation space contains 33 variables corresponding to position, rotation, velocity, and angular velocities of the two arm Rigidbodies.
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation.
 
 #### Action Space
-The Vector Action space is Continuous and has a Size of 4, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping.
+
 #### Rewards
-A reward of +0.1 is provided for each step that the agent's hand is in the goal location.
+If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01
 
 ### Completion Criteria
 After each episode, the rewards received by each agent should be added(without discounting), to get a score for each agent. This should yield 2 (potentially different) scores. Taking the maximum of these 2 scores yields a single score for each episode. The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
