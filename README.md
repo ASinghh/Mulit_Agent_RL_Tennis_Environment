@@ -1,15 +1,14 @@
 # Mulit Agent RL- Tennis Environment
 
 ## Introduction
-The project is the second one of the three projects required for graduating [Udacity's Deep Reinforcement Learning Nano Degree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893). The project is to train the agent/agents using the Deep Deterministic Policy Gradient(DDPG) to solve the Unity ML Reacher environment. The base code for implementation is borrowed from [Udacity's implementation of DDPG](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/DDPG.ipynb), which I have modified and finetuned to solve the environment under consideration. 
+The project is the second one of the three projects required for graduating [Udacity's Deep Reinforcement Learning Nano Degree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893). The project is to train two agents using the Deep Deterministic Policy Gradient(DDPG) to solve the Unity ML Tennis environment. The base code for implementation is borrowed from [Udacity's implementation of DDPG](https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-bipedal/DDPG.ipynb), which I have modified and finetuned to solve the environment under consideration. 
 
 
 ## Project details
 ### Environment 
-The environment under consideration is on of the many [Unity ML-Agents Toolkit's](https://github.com/Unity-Technologies/ml-agents) game environments. These environments enable games and simulations to serve as environments for training intelligent agents. The environment is called the Reacher Environment. In this environment, a double-jointed arm can move to target locations.The goal of the agent is to maintain its position at the target location for as many time steps as possible. Two separate versions of the Unity environment are considered for the project,<br/><br/>
-    1. Environment with a single agent.<br/>
-    2. Environment with 20 identical agents, each with its own copy of the environment.<br/><br/>
- A graphic rendering of the environment looks like the following GIF. <br/> <br/> <br/> ![Tennis Collaboration](gifs/tennis.gif)
+The environment under consideration is on of the many [Unity ML-Agents Toolkit's](https://github.com/Unity-Technologies/ml-agents) game environments. These environments enable games and simulations to serve as environments for training intelligent agents. In the environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. The goal of each agent is to keep the ball in play.
+
+The observation space consists of 8 variables corresponding to the position and velocity of the ball and racket. Each agent receives its own, local observation. Two continuous actions are available, corresponding to movement toward (or away from) the net, and jumping. . <br/> <br/> <br/> ![Tennis Collaboration](gifs/tennis.gif)
 
 #### State Space
 The Vector Observation space contains 33 variables corresponding to position, rotation, velocity, and angular velocities of the two arm Rigidbodies.
